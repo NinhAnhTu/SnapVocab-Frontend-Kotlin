@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream_50">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/bg_friends_header">
+
+        <!-- Title Row with Notification Icon -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn bè"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:id="@+id/btnNotifications"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_bell"
+                android:background="@drawable/bg_notification_button"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                app:tint="@color/text_primary"
+                android:contentDescription="Notifications" />
+        </RelativeLayout>
+
+        <!-- Container bao quanh TabLayout -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_tab_layout"
+            android:padding="4dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/bg_tab_indicator"
+                app:tabIndicatorColor="@color/cream_500"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorFullWidth="true"
+                app:tabTextColor="@color/tab_text_color"
+                app:tabSelectedTextColor="@color/black"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabPaddingStart="0dp"
+                app:tabPaddingEnd="0dp"
+                app:tabMaxWidth="0dp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- ViewPager2 -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Navigation -->
+    <include layout="@layout/bottom_nav" />
+
+</LinearLayout>

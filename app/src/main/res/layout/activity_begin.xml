@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/cream_50">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="48dp"
+        android:gravity="center_horizontal">
+
+        <!-- Top spacer - Adjusted to shift content up -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7" />
+
+        <!-- Illustration Container -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp">
+
+            <!-- Background circles -->
+            <View
+                android:layout_width="224dp"
+                android:layout_height="224dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle_cream_light" />
+
+            <!-- Decorative dots -->
+
+            <!-- Illustration with Tick -->
+            <FrameLayout
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_camera_illustration1" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/ic_tick"
+                    android:elevation="4dp" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <!-- Logo Container -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Logo Icon -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_logo_gradient"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_camera_illustration2" />
+
+            </FrameLayout>
+
+            <!-- Logo Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snap"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:letterSpacing="-0.02"
+                android:layout_marginStart="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vocab"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/cream_600"
+                android:letterSpacing="-0.02" />
+
+        </LinearLayout>
+
+        <!-- Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture. Learn. Connect."
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take a photo, discover vocabulary, and share knowledge with friends."
+            android:textSize="14sp"
+            android:textColor="@color/text_tertiary"
+            android:gravity="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Feature Pills -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <!-- Row 1: Snap & Learn and AI Analysis -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_pill"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginEnd="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📸"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Snap &amp; Learn"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/cream_600" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_pill"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🤖"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Analysis"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/cream_600" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 2: Share (Centered) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_pill"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👫"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cream_600" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom spacer - Adjusted to shift content up -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3" />
+
+        <!-- CTA Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGetStarted"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Get Started"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_gradient"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_arrow_forward"
+                app:iconGravity="textEnd"
+                app:iconPadding="8dp"
+                android:stateListAnimator="@animator/button_scale" />
+
+            <!-- Terms Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="By continuing, you agree to our Terms &amp; Privacy Policy"
+                android:textSize="12sp"
+                android:textColor="@color/text_tertiary"
+                android:gravity="center"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

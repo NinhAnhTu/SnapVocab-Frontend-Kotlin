@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_50"
+    android:orientation="vertical">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_left"
+            app:tint="@color/text_primary"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tạo Postcard"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/rootScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card Preview -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="6dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/ivPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cream_100"
+                    android:scaleType="centerCrop" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Word Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="4dp">
+
+                <TextView
+                    android:id="@+id/tvWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="word"
+                    android:textColor="@color/text_primary"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPronunciation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="/pronunciation/"
+                    android:textColor="@color/cream_600"
+                    android:textSize="17sp"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:id="@+id/tvMeaning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="meaning"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cream_200"
+                android:layout_marginTop="24dp" />
+
+            <!-- Note Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="Lời nhắn của bạn"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="10dp"
+                app:drawableTint="@color/cream_600" />
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="top"
+                android:hint="Chia sẻ suy nghĩ về bức ảnh này..."
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/warm_gray"
+                android:textSize="15sp" />
+
+            <!-- Visibility Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp"
+                android:text="Chế độ hiển thị"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_shield"
+                android:drawablePadding="10dp"
+                app:drawableTint="@color/cream_600" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupVisibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+                <RadioButton
+                    android:id="@+id/rbFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Bạn bè"
+                    android:buttonTint="@color/cream_600"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="Công khai"
+                    android:buttonTint="@color/cream_600"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+            </RadioGroup>
+
+            <!-- Receiver List Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp"
+                android:text="Gửi đến bạn bè"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_friends"
+                android:drawablePadding="10dp"
+                app:drawableTint="@color/cream_600" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReceivers"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/bg_input_field"
+                android:padding="4dp" />
+
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:visibility="gone" />
+
+            <!-- Action Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSendPostcard"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:text="Gửi Postcard"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_gradient"
+                app:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_bottom_nav"
+    android:elevation="8dp"
+    android:gravity="center_vertical"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="2dp"
+        android:background="?attr/selectableItemBackground">
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_home"
+            android:tint="@color/warm_gray" />
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="10sp"
+            android:textColor="@color/warm_gray"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navFriends"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="2dp"
+        android:background="?attr/selectableItemBackground">
+        <ImageView
+            android:id="@+id/ivFriends"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_friends"
+            android:tint="@color/warm_gray" />
+        <TextView
+            android:id="@+id/tvFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friends"
+            android:textSize="10sp"
+            android:textColor="@color/warm_gray"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navVocab"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="2dp"
+        android:background="?attr/selectableItemBackground">
+        <ImageView
+            android:id="@+id/ivVocab"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_book"
+            android:tint="@color/warm_gray" />
+        <TextView
+            android:id="@+id/tvVocab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vocab"
+            android:textSize="10sp"
+            android:textColor="@color/warm_gray"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navProfile"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="2dp"
+        android:background="?attr/selectableItemBackground">
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_user"
+            android:tint="@color/warm_gray" />
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="10sp"
+            android:textColor="@color/warm_gray"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+</LinearLayout>
