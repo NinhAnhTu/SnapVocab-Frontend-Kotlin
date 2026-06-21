@@ -160,3 +160,23 @@ Lưu ý: Nếu dùng emulator, dùng http://10.0.2.2:8000/ (localhost của máy
 1. Đăng nhập → chụp ảnh → phân tích → hiển thị từ vựng.
 2. Tạo postcard → gửi → kiểm tra feed.
 3. Like, comment → kiểm tra tương tác.
+
+---
+
+## 👥 Team Members
+
+| Member | Role | Responsibilities |
+|---------|------|------------------|
+| **Ninh Anh Tú** | 🧑‍💻 Team Leader, Backend & AI Engineer | Backend architecture, YOLO + Gemini pipeline, model training, API integration |
+| **Trần Hữu Lộc** | 📊 Database Engineer & Tester | MySQL database design, Postcard module development, documentation, software testing |
+| **Nguyễn Khánh** | 📱 Frontend Developer | Android UI development, OpenCV integration, product demo, presentation design |
+
+---
+
+## 📬 Liên hệ
+**Tác giả**: 
+- Ninh Anh Tu 23110168@student.hcmute.edu.vn
+- Tran Huu Loc 23110123@student.hcmute.edu.vn
+- Nguyen Khanh 23110112@student.hcmute.edu.vn
+
+**Repo**: https://github.com/NinhAnhTu/SnapVocab-Frontend-Kotlin
